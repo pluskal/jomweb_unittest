@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -32,7 +33,7 @@ namespace App.Infra
 
         public void Update(object entity)
         {
-            db.Entry(entity).State = System.Data.EntityState.Modified;
+            db.Entry(entity).State = EntityState.Modified;
             db.SaveChanges();
         }
 
